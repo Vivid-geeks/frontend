@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vivid Geeks - Blog</title>
+  <meta name="description" content="Latest blog posts and tech insights from Vivid Geeks" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html">Vivid<span class="text-teal">Geeks</span></a>
+        </div>
+        <nav class="nav-menu">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="btn-primary">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Blog Section -->
+  <section class="blog-page" style="padding: 140px 0;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Latest Articles & Insights</h2>
+        <p>Stay informed with our latest updates, IT trends, and expert tips.</p>
+      </div>
+
+      <div class="blog-grid">
+        <div class="blog-card">
+          <img src="https://source.unsplash.com/600x400/?technology" alt="Blog Image">
+          <div class="blog-card-body">
+            <h3>5 Ways Managed IT Services Boost Your Business</h3>
+            <p>Discover how outsourcing your IT can increase efficiency, cut costs, and let you focus on growth.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <img src="https://source.unsplash.com/600x400/?cybersecurity" alt="Cybersecurity Tips">
+          <div class="blog-card-body">
+            <h3>Cybersecurity Trends to Watch in 2025</h3>
+            <p>Learn how to stay ahead of the latest digital threats and protect your business infrastructure.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="footer-logo"><a href="index.html">Vivid<span class="text-teal">Geeks</span></a></div>
+          <p>Empowering businesses with innovative IT solutions and reliable technology services.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <ul class="footer-contact">
+            <li>55 Bell St, Coburg 3058</li>
+            <li>Melbourne, Victoria</li>
+            <li>info@vividgeeks.com</li>
+            <li>+61 415 030 093</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Vivid Geeks. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <button id="scrollToTop" class="scroll-to-top"><i class="fas fa-arrow-up"></i></button>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    window.addEventListener('scroll', () => {
+      scrollToTopBtn.classList.toggle('show', window.pageYOffset > 300);
+    });
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
